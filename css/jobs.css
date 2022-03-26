@@ -1,0 +1,125 @@
+header {
+  background-color: var(--bg-secondary);
+  height: 7em;
+  width: 100%;
+  -webkit-box-shadow: 0 10px 20px var(--shadow);
+          box-shadow: 0 10px 20px var(--shadow);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header .logo img {
+  height: 5em;
+  margin-left: 4em;
+}
+
+header .header .logo #light {
+  display: block;
+}
+
+header .header .logo #dark {
+  display: none;
+}
+
+header .header .nav ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+header .header .nav ul a {
+  text-decoration: none;
+  font-size: 1em;
+  color: var(--subheading-color);
+  font-weight: 700;
+  margin: 1.25em;
+}
+
+header .header .user-info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header .user-info .txt-info {
+  margin-left: 35rem;
+  text-align: right;
+}
+
+header .header .user-info .txt-info h2 {
+  color: var(--subheading-color);
+  font-size: 1.5em;
+}
+
+header .header .user-info .txt-info a {
+  color: var(--delete-btn);
+}
+
+header .header .user-info .profile-pic img {
+  height: 3rem;
+  width: 3rem;
+}
+
+header .header .theme-btn {
+  margin-right: 3em;
+  margin-left: 2em;
+}
+
+@media only screen and (max-width: 1366px) {
+  header .header .user-info .txt-info {
+    margin-left: 17rem;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  header .header .user-info .txt-info {
+    margin-left: 15rem;
+  }
+}
+
+.add-proj form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+/*# sourceMappingURL=jobs.css.map */

@@ -1,0 +1,132 @@
+html[data-theme="dark"] {
+  --bg-main: #1A2744;
+  --bg-secondary: #2E3D60;
+  --bg-table-head: #dfe1eb;
+  --bg-table-body: #283553;
+  --heading-color: #FFFFFF;
+  --subheading-color: #92C4FF;
+  --table-btn: #EAECF4;
+  --delete-btn: #FF8975;
+  --delete-light: #fd6a50;
+  --edit-btn: #73FFE0;
+  --shadow: rgba(0, 0, 0, 0.4);
+}
+
+html[data-theme="light"] {
+  --bg-main: #F4F4FB;
+  --bg-secondary: #EAECF4;
+  --bg-table-head: #2E3D60;
+  --bg-table-body: #EAECF4;
+  --heading-color: #FFFFFF;
+  --subheading-color: #008FFF;
+  --table-btn: #1A2744;
+  --delete-btn: #FF5436;
+  --delete-light: #d85c46;
+  --edit-btn: #50E3C2;
+  --shadow: rgba(0, 0, 0, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins,Lato;
+  font-size: 16px;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--bg-main);
+}
+
+body .login-box {
+  -webkit-box-shadow: 0 10px 20px var(--shadow);
+          box-shadow: 0 10px 20px var(--shadow);
+  background-color: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+body .login-box .headlogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .login-box .headlogo .logo #light {
+  height: 7rem;
+  display: block;
+  margin: 1rem;
+}
+
+body .login-box .input-cont {
+  width: 100%;
+  text-align: center;
+}
+
+body .login-box .input-cont h1 {
+  color: var(--subheading-color);
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin: .5rem;
+}
+
+body .login-box .input-cont input {
+  width: 20rem;
+  padding: .5rem;
+  font-size: 1.2rem;
+  margin: 1rem auto;
+  border: none;
+  border-radius: .5rem;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+body .login-box .input-cont input:active {
+  border: 2px solid var(--bg-table-head);
+}
+
+body .login-box .input-cont button {
+  -webkit-box-shadow: 0 5px 10px var(--shadow);
+          box-shadow: 0 5px 10px var(--shadow);
+  width: 90%;
+  padding: .5rem;
+  margin: .75rem auto;
+  font-size: 1.25rem;
+  font-weight: 600;
+  border: none;
+  border-radius: .25rem;
+  color: var(--heading-color);
+  background-color: var(--subheading-color);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+body .login-box .input-cont button:hover {
+  background-color: #298fdd;
+}
+
+body .login-box .input-cont button:active {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+}
+
+body .login-box .input-cont button img {
+  width: 1.25rem;
+}
+
+body .login-box .input-cont .error {
+  color: red;
+}
+/*# sourceMappingURL=login.css.map */
