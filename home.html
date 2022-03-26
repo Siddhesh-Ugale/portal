@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>North Star Portal</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jQuery.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <div class="logo">
+                <img id="light" src="images/logo-light.png" alt="logo">
+                <img id="dark" src="images/logo-dark.png" alt="logo">
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="jobs.php">Jobs</a></li>
+                    <li><a href="tut.php">Others</a></li>
+                </ul>
+            </div>
+            <div class="user-info">
+                <div class="txt-info">
+                    <h2>Siddhesh Ugale</h2>
+                    <a href="logout=1">Not You? Log Out</a>
+                </div>
+                <div class="profile-pic">
+                    <img src="images/user.svg" alt="profile picture">
+                </div>
+            </div>
+            <div class="theme-btn">
+                <input type="checkbox" name="theme" id="switch" /><label for="switch">Toggle</label>
+            </div>
+        </div>
+    </header>
+    <div class="content">
+        <section class="quicklinks">
+            <div class="heading"><h1>Quicklinks</h1></div>
+            <div class="links">
+                <div class="main-link">
+                    <button type="button" class="dropbtn">123456</button>
+                    <div id="myDropdown" class="drp-content" style="display: none">
+                        <button onClick="fetchtable('<?php echo $jobnum ; ?>','status_report','<?php echo $status ; ?>')">Status Report</button><br>
+                        <button onClick="fetchtable('<?php echo $jobnum ; ?>','cd_log','<?php echo $cd ?>')"> Change Log</button><br>
+                        <button onClick="fetchtable('<?php echo $jobnum ; ?>','rfi_log','<?php echo $rfi ?>')"> RFI Log</button><br>
+                        <button onClick="fetchtable('<?php echo $jobnum ; ?>','transmittal_log','<?php echo $transmit ?>')"> Transmittal Log</button><br>
+                        <button onClick="fetchtable('<?php echo $jobnum ; ?>','des_draw','<?php echo $des ?>')"> Design Drawing Log</button>
+                    </div><br>
+                    <hr> 
+                    <button type="button" class="dropbtn">123456</button>
+                    <div id="myDropdown" class="drp-content" style="display: none">
+                        <button onClick="fetchtable('<?php echo $jobnum ; ?>','status_report','<?php echo $status ; ?>')">Status Report</button><br>
+                        <button onClick="fetchtable('<?php echo $jobnum ; ?>','cd_log','<?php echo $cd ?>')"> Change Log</button><br>
+                        <button onClick="fetchtable('<?php echo $jobnum ; ?>','rfi_log','<?php echo $rfi ?>')"> RFI Log</button><br>
+                        <button onClick="fetchtable('<?php echo $jobnum ; ?>','transmittal_log','<?php echo $transmit ?>')"> Transmittal Log</button><br>
+                        <button onClick="fetchtable('<?php echo $jobnum ; ?>','des_draw','<?php echo $des ?>')"> Design Drawing Log</button>
+                    </div><br>
+                    <hr> 
+                    <button type="button" class="dropbtn">123456</button>
+                    <div id="myDropdown" class="drp-content" style="display: none">
+                        <button onClick="fetchtable('<?php echo $jobnum ; ?>','status_report','<?php echo $status ; ?>')">Status Report</button><br>
+                        <button onClick="fetchtable('<?php echo $jobnum ; ?>','cd_log','<?php echo $cd ?>')"> Change Log</button><br>
+                        <button onClick="fetchtable('<?php echo $jobnum ; ?>','rfi_log','<?php echo $rfi ?>')"> RFI Log</button><br>
+                        <button onClick="fetchtable('<?php echo $jobnum ; ?>','transmittal_log','<?php echo $transmit ?>')"> Transmittal Log</button><br>
+                        <button onClick="fetchtable('<?php echo $jobnum ; ?>','des_draw','<?php echo $des ?>')"> Design Drawing Log</button>
+                    </div><br>
+                    <hr> 
+                    <button type="button" class="dropbtn">123456</button>
+                    <div id="myDropdown" class="drp-content" style="display: none">
+                        <button onClick="fetchtable('<?php echo $jobnum ; ?>','status_report','<?php echo $status ; ?>')">Status Report</button><br>
+                        <button onClick="fetchtable('<?php echo $jobnum ; ?>','cd_log','<?php echo $cd ?>')"> Change Log</button><br>
+                        <button onClick="fetchtable('<?php echo $jobnum ; ?>','rfi_log','<?php echo $rfi ?>')"> RFI Log</button><br>
+                        <button onClick="fetchtable('<?php echo $jobnum ; ?>','transmittal_log','<?php echo $transmit ?>')"> Transmittal Log</button><br>
+                        <button onClick="fetchtable('<?php echo $jobnum ; ?>','des_draw','<?php echo $des ?>')"> Design Drawing Log</button>
+                    </div><br>
+                    <hr> 
+                </div>
+            </div>
+        </section>
+        <section class="table-cont">
+            <!-- <div class="table-info">
+                <div class="table-heading">
+                    <h1>123456 Status Report</h1>
+                    <div class="table-stats">
+                        <h3>Date Updated : 12 July 2022</h3>
+                        <h3>Status : 42%</h3>
+                        <h3>Tonnage : 1.5</h3>
+                    </div>
+                </div>
+                <div class="table-btn">
+                    <button class="click-btn">Add Row</button>
+                    <button class="click-btn">Export</button>
+                </div>
+            </div>
+            <div class="log-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Area</th>
+                            <th>Seq No.</th>
+                            <th>Description</th>
+                            <th>% Model Modeled</th>
+                            <th>% Model Checked</th>
+                            <th>% Conn Modeled</th>
+                            <th>% Conn Checked</th>
+                            <th>Est No of DWGS</th>
+                            <th>Actual No of DWGS</th>
+                            <th>No of DWGS Detailed</th>
+                            <th>No of DWGS Checked</th>
+                            <th>Previous Dt of OFA</th>
+                            <th>Revised Dt of OFA</th>
+                            <th>Actual Dt of OFA</th>
+                            <th>No of DWGS OFA</th>
+                            <th>Dt Returned from Appl</th>
+                            <th>Dt Reissued from Appl</th>
+                            <th>No of DWGS Re Issued</th>
+                            <th>Dt rev Returned from Appl</th>
+                            <th>Est Dt to Shop</th>
+                            <th>Actual Dt to Shop</th>
+                            <th>No of DWGS to Shop</th>
+                            <th>Est field Bolt List Dt</th>
+                            <th>Actual Field Bolt List Dt</th>
+                            <th>Percent Completed</th>
+                            <th>Weight in Tons</th>
+                            <th>Remarks</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Area</td><td>Seq No.</td><td>Description</td><td>% Model Modeled</td><td>% Model Checked</td><td>% Conn Modeled</td><td>% Conn Checked</td><td>Est No of DWGS</td><td>Actual No of DWGS</td><td>No of DWGS Detailed</td><td>No of DWGS Checked</td><td>Previous Dt of OFA</td><td>Revised Dt of OFA</td><td>Actual Dt of OFA</td><td>No of DWGS OFA</td><td>Dt Returned from Appl</td><td>Dt Reissued from Appl</td><td>No of DWGS Re Issued</td><td>Dt rev Returned from Appl</td><td>Est Dt to Shop</td><td>Actual Dt to Shop</td><td>No of DWGS to Shop</td><td>Est field Bolt List Dt</td><td>Actual Field Bolt List Dt</td><td>Percent Completed</td><td>Weight in Tons</td><td>Remarks</td></tr>
+                        <tr><td>Area</td><td>Seq No.</td><td>Description</td><td>% Model Modeled</td><td>% Model Checked</td><td>% Conn Modeled</td><td>% Conn Checked</td><td>Est No of DWGS</td><td>Actual No of DWGS</td><td>No of DWGS Detailed</td><td>No of DWGS Checked</td><td>Previous Dt of OFA</td><td>Revised Dt of OFA</td><td>Actual Dt of OFA</td><td>No of DWGS OFA</td><td>Dt Returned from Appl</td><td>Dt Reissued from Appl</td><td>No of DWGS Re Issued</td><td>Dt rev Returned from Appl</td><td>Est Dt to Shop</td><td>Actual Dt to Shop</td><td>No of DWGS to Shop</td><td>Est field Bolt List Dt</td><td>Actual Field Bolt List Dt</td><td>Percent Completed</td><td>Weight in Tons</td><td>Remarks</td></tr>
+                        <tr><td>Area</td><td>Seq No.</td><td>Description</td><td>% Model Modeled</td><td>% Model Checked</td><td>% Conn Modeled</td><td>% Conn Checked</td><td>Est No of DWGS</td><td>Actual No of DWGS</td><td>No of DWGS Detailed</td><td>No of DWGS Checked</td><td>Previous Dt of OFA</td><td>Revised Dt of OFA</td><td>Actual Dt of OFA</td><td>No of DWGS OFA</td><td>Dt Returned from Appl</td><td>Dt Reissued from Appl</td><td>No of DWGS Re Issued</td><td>Dt rev Returned from Appl</td><td>Est Dt to Shop</td><td>Actual Dt to Shop</td><td>No of DWGS to Shop</td><td>Est field Bolt List Dt</td><td>Actual Field Bolt List Dt</td><td>Percent Completed</td><td>Weight in Tons</td><td>Remarks</td></tr>
+                        <tr><td>Area</td><td>Seq No.</td><td>Description</td><td>% Model Modeled</td><td>% Model Checked</td><td>% Conn Modeled</td><td>% Conn Checked</td><td>Est No of DWGS</td><td>Actual No of DWGS</td><td>No of DWGS Detailed</td><td>No of DWGS Checked</td><td>Previous Dt of OFA</td><td>Revised Dt of OFA</td><td>Actual Dt of OFA</td><td>No of DWGS OFA</td><td>Dt Returned from Appl</td><td>Dt Reissued from Appl</td><td>No of DWGS Re Issued</td><td>Dt rev Returned from Appl</td><td>Est Dt to Shop</td><td>Actual Dt to Shop</td><td>No of DWGS to Shop</td><td>Est field Bolt List Dt</td><td>Actual Field Bolt List Dt</td><td>Percent Completed</td><td>Weight in Tons</td><td>Remarks</td></tr>
+                        <tr><td>Area</td><td>Seq No.</td><td>Description</td><td>% Model Modeled</td><td>% Model Checked</td><td>% Conn Modeled</td><td>% Conn Checked</td><td>Est No of DWGS</td><td>Actual No of DWGS</td><td>No of DWGS Detailed</td><td>No of DWGS Checked</td><td>Previous Dt of OFA</td><td>Revised Dt of OFA</td><td>Actual Dt of OFA</td><td>No of DWGS OFA</td><td>Dt Returned from Appl</td><td>Dt Reissued from Appl</td><td>No of DWGS Re Issued</td><td>Dt rev Returned from Appl</td><td>Est Dt to Shop</td><td>Actual Dt to Shop</td><td>No of DWGS to Shop</td><td>Est field Bolt List Dt</td><td>Actual Field Bolt List Dt</td><td>Percent Completed</td><td>Weight in Tons</td><td>Remarks</td></tr>
+                        <tr><td>Area</td><td>Seq No.</td><td>Description</td><td>% Model Modeled</td><td>% Model Checked</td><td>% Conn Modeled</td><td>% Conn Checked</td><td>Est No of DWGS</td><td>Actual No of DWGS</td><td>No of DWGS Detailed</td><td>No of DWGS Checked</td><td>Previous Dt of OFA</td><td>Revised Dt of OFA</td><td>Actual Dt of OFA</td><td>No of DWGS OFA</td><td>Dt Returned from Appl</td><td>Dt Reissued from Appl</td><td>No of DWGS Re Issued</td><td>Dt rev Returned from Appl</td><td>Est Dt to Shop</td><td>Actual Dt to Shop</td><td>No of DWGS to Shop</td><td>Est field Bolt List Dt</td><td>Actual Field Bolt List Dt</td><td>Percent Completed</td><td>Weight in Tons</td><td>Remarks</td></tr>
+                        <tr><td>Area</td><td>Seq No.</td><td>Description</td><td>% Model Modeled</td><td>% Model Checked</td><td>% Conn Modeled</td><td>% Conn Checked</td><td>Est No of DWGS</td><td>Actual No of DWGS</td><td>No of DWGS Detailed</td><td>No of DWGS Checked</td><td>Previous Dt of OFA</td><td>Revised Dt of OFA</td><td>Actual Dt of OFA</td><td>No of DWGS OFA</td><td>Dt Returned from Appl</td><td>Dt Reissued from Appl</td><td>No of DWGS Re Issued</td><td>Dt rev Returned from Appl</td><td>Est Dt to Shop</td><td>Actual Dt to Shop</td><td>No of DWGS to Shop</td><td>Est field Bolt List Dt</td><td>Actual Field Bolt List Dt</td><td>Percent Completed</td><td>Weight in Tons</td><td>Remarks</td></tr>
+                        <tr><td>Area</td><td>Seq No.</td><td>Description</td><td>% Model Modeled</td><td>% Model Checked</td><td>% Conn Modeled</td><td>% Conn Checked</td><td>Est No of DWGS</td><td>Actual No of DWGS</td><td>No of DWGS Detailed</td><td>No of DWGS Checked</td><td>Previous Dt of OFA</td><td>Revised Dt of OFA</td><td>Actual Dt of OFA</td><td>No of DWGS OFA</td><td>Dt Returned from Appl</td><td>Dt Reissued from Appl</td><td>No of DWGS Re Issued</td><td>Dt rev Returned from Appl</td><td>Est Dt to Shop</td><td>Actual Dt to Shop</td><td>No of DWGS to Shop</td><td>Est field Bolt List Dt</td><td>Actual Field Bolt List Dt</td><td>Percent Completed</td><td>Weight in Tons</td><td>Remarks</td></tr>
+                        <tr><td>Area</td><td>Seq No.</td><td>Description</td><td>% Model Modeled</td><td>% Model Checked</td><td>% Conn Modeled</td><td>% Conn Checked</td><td>Est No of DWGS</td><td>Actual No of DWGS</td><td>No of DWGS Detailed</td><td>No of DWGS Checked</td><td>Previous Dt of OFA</td><td>Revised Dt of OFA</td><td>Actual Dt of OFA</td><td>No of DWGS OFA</td><td>Dt Returned from Appl</td><td>Dt Reissued from Appl</td><td>No of DWGS Re Issued</td><td>Dt rev Returned from Appl</td><td>Est Dt to Shop</td><td>Actual Dt to Shop</td><td>No of DWGS to Shop</td><td>Est field Bolt List Dt</td><td>Actual Field Bolt List Dt</td><td>Percent Completed</td><td>Weight in Tons</td><td>Remarks</td></tr>
+                        <tr><td>Area</td><td>Seq No.</td><td>Description</td><td>% Model Modeled</td><td>% Model Checked</td><td>% Conn Modeled</td><td>% Conn Checked</td><td>Est No of DWGS</td><td>Actual No of DWGS</td><td>No of DWGS Detailed</td><td>No of DWGS Checked</td><td>Previous Dt of OFA</td><td>Revised Dt of OFA</td><td>Actual Dt of OFA</td><td>No of DWGS OFA</td><td>Dt Returned from Appl</td><td>Dt Reissued from Appl</td><td>No of DWGS Re Issued</td><td>Dt rev Returned from Appl</td><td>Est Dt to Shop</td><td>Actual Dt to Shop</td><td>No of DWGS to Shop</td><td>Est field Bolt List Dt</td><td>Actual Field Bolt List Dt</td><td>Percent Completed</td><td>Weight in Tons</td><td>Remarks</td></tr>
+                        <tr><td>Area</td><td>Seq No.</td><td>Description</td><td>% Model Modeled</td><td>% Model Checked</td><td>% Conn Modeled</td><td>% Conn Checked</td><td>Est No of DWGS</td><td>Actual No of DWGS</td><td>No of DWGS Detailed</td><td>No of DWGS Checked</td><td>Previous Dt of OFA</td><td>Revised Dt of OFA</td><td>Actual Dt of OFA</td><td>No of DWGS OFA</td><td>Dt Returned from Appl</td><td>Dt Reissued from Appl</td><td>No of DWGS Re Issued</td><td>Dt rev Returned from Appl</td><td>Est Dt to Shop</td><td>Actual Dt to Shop</td><td>No of DWGS to Shop</td><td>Est field Bolt List Dt</td><td>Actual Field Bolt List Dt</td><td>Percent Completed</td><td>Weight in Tons</td><td>Remarks</td></tr>
+                        <tr><td>Area</td><td>Seq No.</td><td>Description</td><td>% Model Modeled</td><td>% Model Checked</td><td>% Conn Modeled</td><td>% Conn Checked</td><td>Est No of DWGS</td><td>Actual No of DWGS</td><td>No of DWGS Detailed</td><td>No of DWGS Checked</td><td>Previous Dt of OFA</td><td>Revised Dt of OFA</td><td>Actual Dt of OFA</td><td>No of DWGS OFA</td><td>Dt Returned from Appl</td><td>Dt Reissued from Appl</td><td>No of DWGS Re Issued</td><td>Dt rev Returned from Appl</td><td>Est Dt to Shop</td><td>Actual Dt to Shop</td><td>No of DWGS to Shop</td><td>Est field Bolt List Dt</td><td>Actual Field Bolt List Dt</td><td>Percent Completed</td><td>Weight in Tons</td><td>Remarks</td></tr>
+                        <tr><td>Area</td><td>Seq No.</td><td>Description</td><td>% Model Modeled</td><td>% Model Checked</td><td>% Conn Modeled</td><td>% Conn Checked</td><td>Est No of DWGS</td><td>Actual No of DWGS</td><td>No of DWGS Detailed</td><td>No of DWGS Checked</td><td>Previous Dt of OFA</td><td>Revised Dt of OFA</td><td>Actual Dt of OFA</td><td>No of DWGS OFA</td><td>Dt Returned from Appl</td><td>Dt Reissued from Appl</td><td>No of DWGS Re Issued</td><td>Dt rev Returned from Appl</td><td>Est Dt to Shop</td><td>Actual Dt to Shop</td><td>No of DWGS to Shop</td><td>Est field Bolt List Dt</td><td>Actual Field Bolt List Dt</td><td>Percent Completed</td><td>Weight in Tons</td><td>Remarks</td></tr>
+                    </tbody>
+                </table>
+            </div> -->
+            <div class="home">
+                <div class="home-txt">
+                    <h1>Welcome to North Star Portal</h1>
+                    <ul>
+                        <li>This portal contains Information about Projects</li>
+                        <li>You can access the Project Logs from Quicklinks section on right side of the portal</li>
+                        <li>Projects Informationcan can be accessed via Job page</li>
+                        <li>If you have any more queries related to use of portal, You can go to :<br><h2>Other -> How to use</h2>section of the page</li>
+                    </ul>
+                </div>
+                <!-- <div class="cards">
+                    <div class="ongoing-project">
+                        <h1>Ongoing Projects</h1><br>
+                        <h2>26</h2>
+                    </div>
+                </div> -->
+            </div>
+        </section>
+    </div>
+<script>
+var checkbox = document.querySelector('input[name=theme]');
+
+checkbox.addEventListener('change', function() {
+    var x = document.getElementById("light");
+    var y = document.getElementById("dark");
+    if(this.checked) {
+        trans()
+        x.style.display = "none";
+        y.style.display = "block";
+        document.documentElement.setAttribute('data-theme', 'dark')
+    } else {
+        trans()
+        x.style.display = "block";
+        y.style.display = "none";
+        document.documentElement.setAttribute('data-theme', 'light')
+    }
+})
+
+let trans = () => {
+    document.documentElement.classList.add('transition');
+    window.setTimeout(() => {
+        document.documentElement.classList.remove('transition')
+    }, 1000)
+}
+
+var coll = document.getElementsByClassName("dropbtn");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
+}
+</script>
+</body>
+</html>
